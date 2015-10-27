@@ -77,7 +77,12 @@ public class RedisClientBase {
       if (db != 0)
       	select(db);
       return true;
-    } catch (IOException e) {
+    } catch (Exception e) {
+      try {
+        if (redisProtocol != null)
+          close();
+      } catch (IOException e1) {
+      }
       throw new RedisException("Could not connect", e);
     } finally {
       subscribed = false;
