@@ -69,7 +69,7 @@ public class AllCommandsTest {
       authtest.info(null);
       fail("should have thrown");
     } catch (RedisException re) {
-      assertEquals("ERR operation not permitted", re.getMessage());
+      assertEquals("NOAUTH Authentication required.", re.getMessage());
     }
     rc.auth("test");
     rc.config_set("requirepass", "");
