@@ -1,26 +1,26 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.github.spullara.redis</groupId>
+  <groupId>com.github.farfabet.redis</groupId>
   <artifactId>redis</artifactId>
-  <version>0.8-SNAPSHOT</version>
+  <version>0.9</version>
   <modules>
     <module>util</module>
     <module>protocol</module>
     <module>client</module>
-    <module>redisgen</module>
-    <module>benchmark</module>
-    <module>netty</module>
-    <module>netty-client</module>
-    <module>netty4</module>
-    <module>netty4-client</module>
-    <module>netty4-server</module>
+<!--     <module>redisgen</module> -->
+<!--     <module>benchmark</module> -->
+<!--     <module>netty</module> -->
+<!--     <module>netty-client</module> -->
+<!--     <module>netty4</module> -->
+<!--     <module>netty4-client</module> -->
+<!--     <module>netty4-server</module> -->
   </modules>
   <packaging>pom</packaging>
 
   <name>redis</name>
-  <url>http://github.com/spullara/redis-protocol</url>
-  <description>A very fast Java redis redis.client.</description>
+  <url>http://github.com/farfabet/redis-protocol</url>
+  <description>A very fast Java redis redis.client. forked from http://github.com/spullara/redis-protocol</description>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -51,9 +51,9 @@
   </licenses>
 
   <scm>
-    <connection>scm:git:git@github.com:spullara/redis-protocol.git</connection>
-    <developerConnection>scm:git:git@github.com:spullara/redis-protocol.git</developerConnection>
-    <url>scm:git:git@github.com:spullara/redis-protocol.git</url>
+    <connection>scm:git:git@github.com:farfabet/redis-protocol.git</connection>
+    <developerConnection>scm:git:git@github.com:farfabet/redis-protocol.git</developerConnection>
+    <url>scm:git:git@github.com:farfabet/redis-protocol.git</url>
   </scm>
 
   <distributionManagement>
