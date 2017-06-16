@@ -3,18 +3,11 @@
 
   <groupId>com.github.farfabet.redis</groupId>
   <artifactId>redis</artifactId>
-  <version>0.9</version>
+  <version>0.10</version>
   <modules>
     <module>util</module>
     <module>protocol</module>
     <module>client</module>
-<!--     <module>redisgen</module> -->
-<!--     <module>benchmark</module> -->
-<!--     <module>netty</module> -->
-<!--     <module>netty-client</module> -->
-<!--     <module>netty4</module> -->
-<!--     <module>netty4-client</module> -->
-<!--     <module>netty4-server</module> -->
   </modules>
   <packaging>pom</packaging>
 
@@ -37,6 +30,18 @@
         <role>developer</role>
       </roles>
       <timezone>-8</timezone>
+      <properties>
+      </properties>
+    </developer>
+    <developer>
+      <id>farfabet</id>
+      <name>Fabien Markart</name>
+      <email>fabien.markart@gmail.com.com</email>
+      <roles>
+        <role>architect</role>
+        <role>developer</role>
+      </roles>
+      <timezone>+2</timezone>
       <properties>
       </properties>
     </developer>

@@ -7,3 +7,6 @@ target
 cache
 *.releaseBackup
 release.properties
+.settings
+.project
+.classpath

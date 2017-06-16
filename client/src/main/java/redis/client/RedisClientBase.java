@@ -71,9 +71,9 @@ public class RedisClientBase {
         return false;
       }
       redisProtocol = new RedisProtocol(new Socket(host, port));
-      parseInfo();
       if (passwd != null)
       	auth(passwd);
+      parseInfo();
       if (db != 0)
       	select(db);
       return true;
@@ -113,7 +113,7 @@ public class RedisClientBase {
       }
     } catch (RedisException re) {
       // Sadly no specific error code for this beyond the text
-      if (re.getMessage().equals("ERR operation not permitted")) {
+      if (re.getMessage().equals("ERR operation not permitted") || re.getMessage().equals("NOAUTH Authentication required.")) {
         // Server is either authenticated and we will try again when AUTH command is sent
         parseAttempted = false;
       } else { // or
@@ -441,8 +441,8 @@ public class RedisClientBase {
    */
   public StatusReply auth(Object password0) throws RedisException {
     StatusReply statusReply = (StatusReply) execute(AUTH, new Command(AUTH_BYTES, password0));
-    // Now that we are successful, parse the info
-    parseInfo();
+    if (statusReply == null|| statusReply.data() == null || ! statusReply.data().startsWith("OK"))
+    	throw new RedisException("Authentification failure.");
     return statusReply;
   }
   
